@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div class="row">
+		
+		<div class="col-md-2 navbar-fixed-top">
+			<p>
+				<label for="search">Search:</label>
+				<input type="text" id="search" ng-model="$ctrl.search" placeholder="Search you wanted" class="form-control"><!-- class="form-control"-->
+			</p>
+			<p>
+				<label for="orderby">Orderby:</label>
+				<select id="orderby" ng-model="$ctrl.orderProp" class="form-control">
+					<option value="id">Alphabetical</option>
+					<option value="age">Newest</option>
+				</select>
+			</p>
+			<time>{{$ctrl.time | date: "MM/dd/yyyy HH:mm:ss"}}</time>
+		</div>
+		
+		<div class="col-md-10 col-md-offset-2">
+			<ul class="phones">
+				<li ng-repeat="phone in $ctrl.phones | filter: $ctrl.search | orderBy: $ctrl.orderProp" class="thumbnail">
+					<a href="#!/phones/{{phone.id}}" target="_blank">
+						<img ng-src="{{phone.imageUrl}}" class="thumb">
+					</a>
+					<a href="#!/phones/{{phone.id}}" target="_blank">{{phone.id}}</a>
+					<p>{{phone.snippet}}</p>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+</div>

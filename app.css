@@ -1,0 +1,141 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+.navbar-fixed-top{
+	padding: 20px
+}
+
+/* View: Phone list */
+.phones {
+  list-style: none;
+}
+
+.phones li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.thumb {
+  float: left;
+  height: 100px;
+  margin: -8px 12px 12px 0;	/*-0.5em 1em 1.5em 0;*/
+  /*padding-bottom: 1em;*/
+  width: 100px;
+}
+
+
+/* View: Phone detail */
+.phone {
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+	transition: all .2s;
+	-o-transition: all .2s;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+}
+
+.phone-thumbs img:hover {
+	transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+}
+
+.phone-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 12%;
+	position: relative;    
+	padding: 0 8px;
+}
+
+.specs > li:before{
+	content: '';
+	height: 90%;
+	width: 1px;
+	background-color: #333;
+	overflow: hidden;
+	display: inline-block;
+	position: absolute;
+	font-size: 0;
+	left: 0;
+  top: 5px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
